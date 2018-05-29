@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Perception Test</string>
+    <string name="start">Start</string>
+    <string name="show">Show</string>
+    <string name="success">Success</string>
+    <string name="fail">Fail</string>
+    <string name="tap_to_cont">tap anywhere to continue</string>
+    <string name="setting">Setting</string>
+</resources>
