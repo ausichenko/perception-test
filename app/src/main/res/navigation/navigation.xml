@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/fragment_setting">
+
+    <fragment
+        android:id="@+id/fragment_setting"
+        android:name="com.ausichenko.test.perception.SettingFragment"
+        android:label="SettingFragment"
+        tools:layout="@layout/fragment_setting" >
+
+        <action
+            android:id="@+id/action_start"
+            app:destination="@id/fragment_show" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_show"
+        android:name="com.ausichenko.test.perception.ShowFragment"
+        android:label="ShowFragment"
+        tools:layout="@layout/fragment_show" >
+
+        <argument
+            android:name="count"
+            app:type="integer" />
+
+        <action
+            android:id="@+id/action_input"
+            app:destination="@id/fragment_input" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_input"
+        android:name="com.ausichenko.test.perception.InputFragment"
+        android:label="InputFragment"
+        tools:layout="@layout/fragment_input" >
+
+        <argument
+            android:name="generated"
+            android:defaultValue="000"
+            app:type="string" />
+
+        <argument
+            android:name="millis"
+            android:defaultValue="0"
+            app:type="integer" />
+
+        <action
+            android:id="@+id/action_success"
+            app:destination="@id/fragment_success" />
+
+        <action
+            android:id="@+id/action_fail"
+            app:destination="@id/fragment_fail" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_success"
+        android:name="com.ausichenko.test.perception.SuccessFragment"
+        android:label="SuccessFragment"
+        tools:layout="@layout/fragment_success" >
+
+        <argument
+            android:name="millis"
+            android:defaultValue="0"
+            app:type="integer" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_fail"
+        android:name="com.ausichenko.test.perception.FailFragment"
+        android:label="FailFragment"
+        tools:layout="@layout/fragment_fail" />
+
+</navigation>
