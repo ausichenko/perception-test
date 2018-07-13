@@ -81,7 +81,7 @@ class ShowFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         return when (item?.itemId) {
             R.id.setting -> {
-                //Navigation.findNavController(item.actionView).popBackStack(R.id.fragment_setting, false)
+                view?.let { Navigation.findNavController(it).popBackStack(R.id.fragment_setting, false) }
                 true
             }
             else -> super.onOptionsItemSelected(item)
