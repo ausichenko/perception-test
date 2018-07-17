@@ -30,7 +30,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:textColor="@color/primary_text"
-            android:textSize="50sp"/>
+            android:textSize="50sp" />
 
         <android.support.v7.widget.AppCompatImageView
             android:id="@+id/plus_button"
@@ -50,18 +50,18 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@color/primary"
-        android:foreground="?attr/selectableItemBackground"
         android:clickable="true"
-        android:focusable="true">
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
+            android:text="@string/start"
             android:textAllCaps="true"
             android:textColor="@color/primary_light"
-            android:textSize="40sp"
-            android:text="@string/start"/>
+            android:textSize="40sp" />
 
     </LinearLayout>
 

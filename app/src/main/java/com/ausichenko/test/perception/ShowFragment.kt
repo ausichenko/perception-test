@@ -75,7 +75,7 @@ class ShowFragment : Fragment() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
-        inflater?.inflate(R.menu.setting, menu)
+        inflater?.inflate(R.menu.fragment_show, menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {

@@ -73,7 +73,6 @@ class InputFragment : Fragment() {
         button9.setOnClickListener { inputText.append("9") }
 
         resetButton.setOnClickListener { inputText.text = "" }
-
         doneButton.setOnClickListener {
             val input = inputText.text.toString()
             if (generated.equals(input)) {
