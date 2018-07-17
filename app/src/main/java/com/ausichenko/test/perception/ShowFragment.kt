@@ -3,7 +3,6 @@ package com.ausichenko.test.perception
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.*
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.navigation.Navigation
 import java.text.DecimalFormat
@@ -17,7 +16,7 @@ class ShowFragment : Fragment() {
     private var generate: String = ""
 
     private lateinit var showText: TextView
-    private lateinit var showButton: LinearLayout
+    private lateinit var showButton: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

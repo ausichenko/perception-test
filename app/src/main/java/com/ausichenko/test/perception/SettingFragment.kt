@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.navigation.Navigation
 
@@ -17,7 +16,7 @@ class SettingFragment : Fragment() {
     private lateinit var minusButton: ImageView
     private lateinit var plusButton: ImageView
     private lateinit var countText: TextView
-    private lateinit var startButton: LinearLayout
+    private lateinit var startButton: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
