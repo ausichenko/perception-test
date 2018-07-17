@@ -224,10 +224,13 @@
             android:layout_weight="1"
             android:orientation="horizontal">
 
-            <LinearLayout
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/reset_button"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:padding="10dp"
+                app:srcCompat="@drawable/ic_clear"/>
 
             <View
                 android:layout_width="1dp"

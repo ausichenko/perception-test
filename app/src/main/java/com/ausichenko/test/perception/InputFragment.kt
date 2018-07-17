@@ -25,6 +25,7 @@ class InputFragment : Fragment() {
     private lateinit var button7: TextView
     private lateinit var button8: TextView
     private lateinit var button9: TextView
+    private lateinit var resetButton: ImageView
     private lateinit var doneButton: ImageView
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -42,6 +43,7 @@ class InputFragment : Fragment() {
         button7 = view.findViewById(R.id.button_7)
         button8 = view.findViewById(R.id.button_8)
         button9 = view.findViewById(R.id.button_9)
+        resetButton = view.findViewById(R.id.reset_button)
         doneButton = view.findViewById(R.id.done_button)
 
         generated = arguments?.let {
@@ -69,6 +71,8 @@ class InputFragment : Fragment() {
         button7.setOnClickListener { inputText.append("7") }
         button8.setOnClickListener { inputText.append("8") }
         button9.setOnClickListener { inputText.append("9") }
+
+        resetButton.setOnClickListener { inputText.text = "" }
 
         doneButton.setOnClickListener {
             val input = inputText.text.toString()
