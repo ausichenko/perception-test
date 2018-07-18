@@ -25,6 +25,7 @@
 
     <!-- Result -->
     <string name="success">Success</string>
+    <string name="time_ms">%d ms</string>
     <string name="fail">Fail</string>
     <string name="tap_to_cont">tap anywhere to continue</string>
     <!-- Result -->

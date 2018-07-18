@@ -21,7 +21,7 @@ class SuccessFragment : Fragment() {
             safeArgs.millis
         }!!
 
-        view.findViewById<TextView>(R.id.time_text_view).text = millis.toString().plus(" ms")
+        view.findViewById<TextView>(R.id.time_text_view).text = getString(R.string.time_ms, millis)
 
         view.setOnClickListener {
             Navigation.findNavController(it).popBackStack(R.id.fragment_show, false)

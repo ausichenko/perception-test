@@ -2,6 +2,7 @@ package com.ausichenko.test.perception
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -75,7 +76,7 @@ class InputFragment : Fragment() {
         resetButton.setOnClickListener { inputText.text = "" }
         doneButton.setOnClickListener {
             val input = inputText.text.toString()
-            if (generated.equals(input)) {
+            if (TextUtils.equals(generated, input)) {
                 val args = Bundle()
                 args.putInt("millis", millis)
                 Navigation.findNavController(it).navigate(R.id.action_success, args)
