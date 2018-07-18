@@ -12,6 +12,9 @@ import androidx.navigation.Navigation
 
 class InputFragment : Fragment() {
 
+    private val isSuccessArg = "isSuccess"
+    private val millisArg = "millis"
+
     private var generated: String = ""
     private var millis: Int = 0
 
@@ -77,8 +80,8 @@ class InputFragment : Fragment() {
         doneButton.setOnClickListener {
             val input = inputText.text.toString()
             val args = Bundle()
-            args.putBoolean("isSuccess", TextUtils.equals(generated, input))
-            args.putInt("millis", millis)
+            args.putBoolean(isSuccessArg, TextUtils.equals(generated, input))
+            args.putInt(millisArg, millis)
             Navigation.findNavController(it).navigate(R.id.action_result, args)
         }
     }

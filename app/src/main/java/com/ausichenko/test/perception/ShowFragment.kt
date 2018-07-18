@@ -10,6 +10,9 @@ import java.util.*
 
 class ShowFragment : Fragment() {
 
+    private val generatedArg = "generated"
+    private val millisArg = "millis"
+
     private var count: Int = 2
     private var downMillis: Long = 0
     private var upMillis: Long = 0
@@ -53,8 +56,8 @@ class ShowFragment : Fragment() {
                 showText.text = ""
 
                 val args = Bundle()
-                args.putString("generated", generate)
-                args.putInt("millis", (upMillis - downMillis).toInt())
+                args.putString(generatedArg, generate)
+                args.putInt(millisArg, (upMillis - downMillis).toInt())
                 Navigation.findNavController(v).navigate(R.id.action_input, args)
             }
             true

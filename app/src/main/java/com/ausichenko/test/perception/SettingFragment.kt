@@ -11,6 +11,8 @@ import androidx.navigation.Navigation
 
 class SettingFragment : Fragment() {
 
+    private val countArg = "count"
+
     private var currentCount:Int = 3
 
     private lateinit var minusButton: ImageView
@@ -50,7 +52,7 @@ class SettingFragment : Fragment() {
         }
         startButton.setOnClickListener {
             val args = Bundle()
-            args.putInt("count", currentCount)
+            args.putInt(countArg, currentCount)
             Navigation.findNavController(it).navigate(R.id.action_start, args)
         }
     }
