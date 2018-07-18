@@ -49,20 +49,21 @@
             app:type="integer" />
 
         <action
-            android:id="@+id/action_success"
-            app:destination="@id/fragment_success" />
-
-        <action
-            android:id="@+id/action_fail"
-            app:destination="@id/fragment_fail" />
+            android:id="@+id/action_result"
+            app:destination="@id/fragment_result" />
 
     </fragment>
 
     <fragment
-        android:id="@+id/fragment_success"
-        android:name="com.ausichenko.test.perception.SuccessFragment"
-        android:label="SuccessFragment"
-        tools:layout="@layout/fragment_success">
+        android:id="@+id/fragment_result"
+        android:name="com.ausichenko.test.perception.ResultFragment"
+        android:label="ResultFragment"
+        tools:layout="@layout/fragment_result">
+
+        <argument
+            android:name="isSuccess"
+            android:defaultValue="false"
+            app:type="boolean" />
 
         <argument
             android:name="millis"
@@ -70,11 +71,5 @@
             app:type="integer" />
 
     </fragment>
-
-    <fragment
-        android:id="@+id/fragment_fail"
-        android:name="com.ausichenko.test.perception.FailFragment"
-        android:label="FailFragment"
-        tools:layout="@layout/fragment_fail" />
 
 </navigation>

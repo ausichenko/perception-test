@@ -76,13 +76,10 @@ class InputFragment : Fragment() {
         resetButton.setOnClickListener { inputText.text = "" }
         doneButton.setOnClickListener {
             val input = inputText.text.toString()
-            if (TextUtils.equals(generated, input)) {
-                val args = Bundle()
-                args.putInt("millis", millis)
-                Navigation.findNavController(it).navigate(R.id.action_success, args)
-            } else {
-                Navigation.findNavController(it).navigate(R.id.action_fail)
-            }
+            val args = Bundle()
+            args.putBoolean("isSuccess", TextUtils.equals(generated, input))
+            args.putInt("millis", millis)
+            Navigation.findNavController(it).navigate(R.id.action_result, args)
         }
     }
 }
