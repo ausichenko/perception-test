@@ -13,7 +13,7 @@
         android:background="@android:color/white"
         android:gravity="center"
         android:textColor="@color/primary_text"
-        android:textSize="50sp" />
+        android:textSize="@dimen/input_text_size" />
 
     <android.support.v7.widget.GridLayout
         android:layout_width="match_parent"

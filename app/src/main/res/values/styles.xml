@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -19,7 +20,7 @@
 
         <item name="android:textAllCaps">true</item>
         <item name="android:textColor">@color/primary_light</item>
-        <item name="android:textSize">40sp</item>
+        <item name="android:textSize">@dimen/main_button_text_size</item>
     </style>
 
     <style name="KeyboardButton">
@@ -34,11 +35,11 @@
 
     <style name="KeyboardButton.Text">
         <item name="android:textColor">@color/primary_light</item>
-        <item name="android:textSize">40sp</item>
+        <item name="android:textSize">@dimen/keyboard_text_size</item>
     </style>
 
     <style name="KeyboardButton.Image">
-        <item name="android:paddingTop">10dp</item>
-        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingTop">@dimen/keyboard_image_padding</item>
+        <item name="android:paddingBottom">@dimen/keyboard_image_padding</item>
     </style>
 </resources>
