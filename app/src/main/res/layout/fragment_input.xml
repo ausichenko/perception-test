@@ -19,162 +19,67 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:background="@color/primary"
         app:columnCount="3">
 
         <TextView
             android:id="@+id/button_1"
-            android:background="@color/primary"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"
-            android:gravity="center"
-            android:text="@string/button_1"
-            android:textColor="@color/primary_light"
-            android:textSize="40sp"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1" />
+            style="@style/KeyboardButton.Text"
+            android:text="@string/button_1" />
 
         <TextView
             android:id="@+id/button_2"
-            android:background="@color/primary"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"
-            android:gravity="center"
-            android:text="@string/button_2"
-            android:textColor="@color/primary_light"
-            android:textSize="40sp"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1" />
+            style="@style/KeyboardButton.Text"
+            android:text="@string/button_2" />
 
         <TextView
             android:id="@+id/button_3"
-            android:background="@color/primary"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"
-            android:gravity="center"
-            android:text="@string/button_3"
-            android:textColor="@color/primary_light"
-            android:textSize="40sp"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1" />
+            style="@style/KeyboardButton.Text"
+            android:text="@string/button_3" />
 
         <TextView
             android:id="@+id/button_4"
-            android:background="@color/primary"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"
-            android:gravity="center"
-            android:text="@string/button_4"
-            android:textColor="@color/primary_light"
-            android:textSize="40sp"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1" />
+            style="@style/KeyboardButton.Text"
+            android:text="@string/button_4" />
 
         <TextView
             android:id="@+id/button_5"
-            android:background="@color/primary"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"
-            android:gravity="center"
-            android:text="@string/button_5"
-            android:textColor="@color/primary_light"
-            android:textSize="40sp"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1" />
+            style="@style/KeyboardButton.Text"
+            android:text="@string/button_5" />
 
         <TextView
             android:id="@+id/button_6"
-            android:background="@color/primary"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"
-            android:gravity="center"
-            android:text="@string/button_6"
-            android:textColor="@color/primary_light"
-            android:textSize="40sp"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1" />
+            style="@style/KeyboardButton.Text"
+            android:text="@string/button_6" />
 
         <TextView
             android:id="@+id/button_7"
-            android:background="@color/primary"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"
-            android:gravity="center"
-            android:text="@string/button_7"
-            android:textColor="@color/primary_light"
-            android:textSize="40sp"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1" />
+            style="@style/KeyboardButton.Text"
+            android:text="@string/button_7" />
 
         <TextView
             android:id="@+id/button_8"
-            android:background="@color/primary"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"
-            android:gravity="center"
-            android:text="@string/button_8"
-            android:textColor="@color/primary_light"
-            android:textSize="40sp"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1" />
+            style="@style/KeyboardButton.Text"
+            android:text="@string/button_8" />
 
         <TextView
             android:id="@+id/button_9"
-            android:background="@color/primary"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"
-            android:gravity="center"
-            android:text="@string/button_9"
-            android:textColor="@color/primary_light"
-            android:textSize="40sp"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1" />
+            style="@style/KeyboardButton.Text"
+            android:text="@string/button_9" />
 
         <android.support.v7.widget.AppCompatImageView
             android:id="@+id/reset_button"
-            android:background="@color/primary"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"
-            android:gravity="center"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1"
+            style="@style/KeyboardButton.Image"
             app:srcCompat="@drawable/ic_clear" />
 
         <TextView
             android:id="@+id/button_0"
-            android:background="@color/primary"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"
-            android:gravity="center"
-            android:text="@string/button_0"
-            android:textColor="@color/primary_light"
-            android:textSize="40sp"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1" />
+            style="@style/KeyboardButton.Text"
+            android:text="@string/button_0" />
 
         <android.support.v7.widget.AppCompatImageView
             android:id="@+id/done_button"
-            android:background="@color/primary"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"
-            android:gravity="center"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1"
+            style="@style/KeyboardButton.Image"
             app:srcCompat="@drawable/ic_done" />
 
     </android.support.v7.widget.GridLayout>
