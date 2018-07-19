@@ -2,6 +2,17 @@
 <resources>
     <string name="app_name">Perception Test</string>
 
+    <!-- Tutorial -->
+    <string name="tutorial_start_title">Choose length</string>
+    <string name="tutorial_start_description">Choose length of number and tap on Start button</string>
+    <string name="tutorial_show_title">Tap to show</string>
+    <string name="tutorial_show_description">Tap and hold to show the number</string>
+    <string name="tutorial_write_title">Write the number</string>
+    <string name="tutorial_write_description">Write and check your result</string>
+    <string name="tutorial_result_title">Good luck</string>
+    <string name="tutorial_result_description">Improve your perception</string>
+    <!-- Tutorial -->
+
     <!-- Setting -->
     <string name="start">Start</string>
     <!-- Setting -->

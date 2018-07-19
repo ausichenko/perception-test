@@ -12,30 +12,30 @@ class IntroActivity : AppIntro() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val sliderPageChoose = SliderPage()
-        sliderPageChoose.title = "Choose length"
-        sliderPageChoose.description = "Choose length of number and tap on Start button"
-        sliderPageChoose.imageDrawable = R.drawable.start
-        sliderPageChoose.bgColor = ContextCompat.getColor(applicationContext, R.color.primary)
-        addSlide(AppIntroFragment.newInstance(sliderPageChoose))
-        val sliderPageShow = SliderPage()
-        sliderPageShow.title = "Tap to show"
-        sliderPageShow.description = "Tap and hold to show a number"
-        sliderPageShow.imageDrawable = R.drawable.show
-        sliderPageShow.bgColor = ContextCompat.getColor(applicationContext, R.color.primary)
-        addSlide(AppIntroFragment.newInstance(sliderPageShow))
-        val sliderPageWrite = SliderPage()
-        sliderPageWrite.title = "Write a number"
-        sliderPageWrite.description = "Write and check your result"
-        sliderPageWrite.imageDrawable = R.drawable.write
-        sliderPageWrite.bgColor = ContextCompat.getColor(applicationContext, R.color.primary)
-        addSlide(AppIntroFragment.newInstance(sliderPageWrite))
-        val sliderPageResult = SliderPage()
-        sliderPageResult.title = "Good luck"
-        sliderPageResult.description = "Improve your perception"
-        sliderPageResult.imageDrawable = R.drawable.result
-        sliderPageResult.bgColor = ContextCompat.getColor(applicationContext, R.color.primary)
-        addSlide(AppIntroFragment.newInstance(sliderPageResult))
+        val startPage = SliderPage()
+        startPage.title = getString(R.string.tutorial_start_title)
+        startPage.description = getString(R.string.tutorial_start_description)
+        startPage.imageDrawable = R.drawable.start
+        startPage.bgColor = ContextCompat.getColor(applicationContext, R.color.primary)
+        addSlide(AppIntroFragment.newInstance(startPage))
+        val showPage = SliderPage()
+        showPage.title = getString(R.string.tutorial_show_title)
+        showPage.description = getString(R.string.tutorial_show_description)
+        showPage.imageDrawable = R.drawable.show
+        showPage.bgColor = ContextCompat.getColor(applicationContext, R.color.primary)
+        addSlide(AppIntroFragment.newInstance(showPage))
+        val writePage = SliderPage()
+        writePage.title = getString(R.string.tutorial_write_title)
+        writePage.description = getString(R.string.tutorial_write_description)
+        writePage.imageDrawable = R.drawable.write
+        writePage.bgColor = ContextCompat.getColor(applicationContext, R.color.primary)
+        addSlide(AppIntroFragment.newInstance(writePage))
+        val resultPage = SliderPage()
+        resultPage.title = getString(R.string.tutorial_result_title)
+        resultPage.description = getString(R.string.tutorial_result_description)
+        resultPage.imageDrawable = R.drawable.result
+        resultPage.bgColor = ContextCompat.getColor(applicationContext, R.color.primary)
+        addSlide(AppIntroFragment.newInstance(resultPage))
     }
 
     override fun onSkipPressed(currentFragment: Fragment?) {
