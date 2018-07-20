@@ -1,4 +1,4 @@
-package com.ausichenko.test.perception
+package com.ausichenko.test.perception.view.input
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -9,6 +9,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.navigation.Navigation
+import com.ausichenko.test.perception.R
+import kotlinx.android.synthetic.main.fragment_input.*
 
 class InputFragment : Fragment() {
 
@@ -18,7 +20,6 @@ class InputFragment : Fragment() {
     private var generated: String = ""
     private var millis: Int = 0
 
-    private lateinit var inputText: TextView
     private lateinit var button0: TextView
     private lateinit var button1: TextView
     private lateinit var button2: TextView
@@ -36,7 +37,6 @@ class InputFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_input, container, false)
 
-        inputText = view.findViewById(R.id.input_text_view)
         button0 = view.findViewById(R.id.button_0)
         button1 = view.findViewById(R.id.button_1)
         button2 = view.findViewById(R.id.button_2)
@@ -65,20 +65,20 @@ class InputFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        button0.setOnClickListener { inputText.append("0") }
-        button1.setOnClickListener { inputText.append("1") }
-        button2.setOnClickListener { inputText.append("2") }
-        button3.setOnClickListener { inputText.append("3") }
-        button4.setOnClickListener { inputText.append("4") }
-        button5.setOnClickListener { inputText.append("5") }
-        button6.setOnClickListener { inputText.append("6") }
-        button7.setOnClickListener { inputText.append("7") }
-        button8.setOnClickListener { inputText.append("8") }
-        button9.setOnClickListener { inputText.append("9") }
+        button0.setOnClickListener { inputTextView.append("0") }
+        button1.setOnClickListener { inputTextView.append("1") }
+        button2.setOnClickListener { inputTextView.append("2") }
+        button3.setOnClickListener { inputTextView.append("3") }
+        button4.setOnClickListener { inputTextView.append("4") }
+        button5.setOnClickListener { inputTextView.append("5") }
+        button6.setOnClickListener { inputTextView.append("6") }
+        button7.setOnClickListener { inputTextView.append("7") }
+        button8.setOnClickListener { inputTextView.append("8") }
+        button9.setOnClickListener { inputTextView.append("9") }
 
-        resetButton.setOnClickListener { inputText.text = "" }
+        resetButton.setOnClickListener { inputTextView.text = "" }
         doneButton.setOnClickListener {
-            val input = inputText.text.toString()
+            val input = inputTextView.text.toString()
             val args = Bundle()
             args.putBoolean(isSuccessArg, TextUtils.equals(generated, input))
             args.putInt(millisArg, millis)

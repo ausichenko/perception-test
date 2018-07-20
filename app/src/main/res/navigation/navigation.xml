@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/fragment_setting"
-        android:name="com.ausichenko.test.perception.SettingFragment"
+        android:name="com.ausichenko.test.perception.view.setting.SettingFragment"
         android:label="SettingFragment"
         tools:layout="@layout/fragment_setting">
 
@@ -18,13 +18,9 @@
 
     <fragment
         android:id="@+id/fragment_show"
-        android:name="com.ausichenko.test.perception.ShowFragment"
+        android:name="com.ausichenko.test.perception.view.show.ShowFragment"
         android:label="ShowFragment"
         tools:layout="@layout/fragment_show">
-
-        <argument
-            android:name="count"
-            app:type="integer" />
 
         <action
             android:id="@+id/action_input"
@@ -34,7 +30,7 @@
 
     <fragment
         android:id="@+id/fragment_input"
-        android:name="com.ausichenko.test.perception.InputFragment"
+        android:name="com.ausichenko.test.perception.view.input.InputFragment"
         android:label="InputFragment"
         tools:layout="@layout/fragment_input">
 
@@ -56,7 +52,7 @@
 
     <fragment
         android:id="@+id/fragment_result"
-        android:name="com.ausichenko.test.perception.ResultFragment"
+        android:name="com.ausichenko.test.perception.view.result.ResultFragment"
         android:label="ResultFragment"
         tools:layout="@layout/fragment_result">
 

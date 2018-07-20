@@ -1,10 +1,12 @@
-package com.ausichenko.test.perception
+package com.ausichenko.test.perception.view.show
 
+import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.*
 import android.widget.TextView
 import androidx.navigation.Navigation
+import com.ausichenko.test.perception.R
 import java.text.DecimalFormat
 import java.util.*
 
@@ -13,13 +15,14 @@ class ShowFragment : Fragment() {
     private val generatedArg = "generated"
     private val millisArg = "millis"
 
-    private var count: Int = 2
     private var downMillis: Long = 0
     private var upMillis: Long = 0
     private var generate: String = ""
 
     private lateinit var showText: TextView
     private lateinit var showButton: TextView
+
+    private lateinit var showViewModel: ShowViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,12 +36,13 @@ class ShowFragment : Fragment() {
         showText = view.findViewById(R.id.show_text_view)
         showButton = view.findViewById(R.id.show_button)
 
-        count = arguments.let {
-            val safeArgs = ShowFragmentArgs.fromBundle(it)
-            safeArgs.count
-        }
+        initViewModel()
 
         return view
+    }
+
+    private fun initViewModel() {
+        showViewModel = ViewModelProviders.of(this).get(ShowViewModel::class.java)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -65,12 +69,13 @@ class ShowFragment : Fragment() {
     }
 
     private fun generate() {
+        val numberLength = showViewModel.getNumberLength()
         var pattern = ""
-        for (it in 1..count) {
+        for (it in 1..numberLength) {
             pattern += "0"
         }
         val decimalFormat = DecimalFormat(pattern)
-        val randomNumber = Random().nextInt(Math.pow(10.0, count.toDouble()).toInt())
+        val randomNumber = Random().nextInt(Math.pow(10.0, numberLength.toDouble()).toInt())
 
         generate = decimalFormat.format(randomNumber)
         showText.text = generate
