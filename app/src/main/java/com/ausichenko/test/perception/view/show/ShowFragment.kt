@@ -4,9 +4,9 @@ import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.*
-import android.widget.TextView
 import androidx.navigation.Navigation
 import com.ausichenko.test.perception.R
+import kotlinx.android.synthetic.main.fragment_show.*
 import java.text.DecimalFormat
 import java.util.*
 
@@ -19,9 +19,6 @@ class ShowFragment : Fragment() {
     private var upMillis: Long = 0
     private var generate: String = ""
 
-    private lateinit var showText: TextView
-    private lateinit var showButton: TextView
-
     private lateinit var showViewModel: ShowViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,9 +29,6 @@ class ShowFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_show, container, false)
-
-        showText = view.findViewById(R.id.show_text_view)
-        showButton = view.findViewById(R.id.show_button)
 
         initViewModel()
 
@@ -53,11 +47,11 @@ class ShowFragment : Fragment() {
                 generate()
 
                 downMillis = System.currentTimeMillis()
-                showText.text = generate
+                showTextView.text = generate
             }
             if (event.action == MotionEvent.ACTION_UP) {
                 upMillis = System.currentTimeMillis()
-                showText.text = ""
+                showTextView.text = ""
 
                 val args = Bundle()
                 args.putString(generatedArg, generate)
@@ -78,7 +72,7 @@ class ShowFragment : Fragment() {
         val randomNumber = Random().nextInt(Math.pow(10.0, numberLength.toDouble()).toInt())
 
         generate = decimalFormat.format(randomNumber)
-        showText.text = generate
+        showTextView.text = generate
     }
 
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {

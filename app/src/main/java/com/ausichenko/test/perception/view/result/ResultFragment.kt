@@ -6,19 +6,14 @@ import android.support.v4.content.ContextCompat
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.navigation.Navigation
 import com.ausichenko.test.perception.R
+import kotlinx.android.synthetic.main.fragment_result.*
 
 class ResultFragment : Fragment() {
 
     private var isSuccess: Boolean = false
     private var millis: Int = 0
-
-    private lateinit var resultIcon: ImageView
-    private lateinit var resultText: TextView
-    private lateinit var timeText: TextView
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -33,10 +28,6 @@ class ResultFragment : Fragment() {
             safeArgs.millis
         }!!
 
-        resultIcon = view.findViewById(R.id.result_image)
-        resultText = view.findViewById(R.id.result_text)
-        timeText = view.findViewById(R.id.time_text_view)
-
         return view
     }
 
@@ -44,14 +35,14 @@ class ResultFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         if (isSuccess) {
-            resultIcon.setImageResource(R.drawable.ic_success)
+            resultImage.setImageResource(R.drawable.ic_success)
             resultText.setText(R.string.success)
             resultText.setTextColor(ContextCompat.getColor(view.context, R.color.primary))
 
             timeText.visibility = View.VISIBLE
             timeText.text = getString(R.string.time_ms, millis)
         } else {
-            resultIcon.setImageResource(R.drawable.ic_fail)
+            resultImage.setImageResource(R.drawable.ic_fail)
             resultText.setText(R.string.fail)
             resultText.setTextColor(ContextCompat.getColor(view.context, R.color.fail))
 

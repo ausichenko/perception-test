@@ -23,64 +23,78 @@
         app:columnCount="3">
 
         <TextView
-            android:id="@+id/button_1"
+            android:id="@+id/button1"
             style="@style/KeyboardButton.Text"
             android:text="@string/button_1" />
 
         <TextView
-            android:id="@+id/button_2"
+            android:id="@+id/button2"
             style="@style/KeyboardButton.Text"
             android:text="@string/button_2" />
 
         <TextView
-            android:id="@+id/button_3"
+            android:id="@+id/button3"
             style="@style/KeyboardButton.Text"
             android:text="@string/button_3" />
 
         <TextView
-            android:id="@+id/button_4"
+            android:id="@+id/button4"
             style="@style/KeyboardButton.Text"
             android:text="@string/button_4" />
 
         <TextView
-            android:id="@+id/button_5"
+            android:id="@+id/button5"
             style="@style/KeyboardButton.Text"
             android:text="@string/button_5" />
 
         <TextView
-            android:id="@+id/button_6"
+            android:id="@+id/button6"
             style="@style/KeyboardButton.Text"
             android:text="@string/button_6" />
 
         <TextView
-            android:id="@+id/button_7"
+            android:id="@+id/button7"
             style="@style/KeyboardButton.Text"
             android:text="@string/button_7" />
 
         <TextView
-            android:id="@+id/button_8"
+            android:id="@+id/button8"
             style="@style/KeyboardButton.Text"
             android:text="@string/button_8" />
 
         <TextView
-            android:id="@+id/button_9"
+            android:id="@+id/button9"
             style="@style/KeyboardButton.Text"
             android:text="@string/button_9" />
 
-        <android.support.v7.widget.AppCompatImageView
-            android:id="@+id/reset_button"
-            style="@style/KeyboardButton.Image"
-            app:srcCompat="@drawable/ic_clear" />
+        <FrameLayout
+            android:id="@+id/resetButton"
+            style="@style/KeyboardButton">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_clear" />
+
+        </FrameLayout>
 
         <TextView
-            android:id="@+id/button_0"
+            android:id="@+id/button0"
             style="@style/KeyboardButton.Text"
             android:text="@string/button_0" />
 
-        <android.support.v7.widget.AppCompatImageView
-            android:id="@+id/done_button"
-            style="@style/KeyboardButton.Image"
-            app:srcCompat="@drawable/ic_done" />
+        <FrameLayout
+            android:id="@+id/doneButton"
+            style="@style/KeyboardButton">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_done" />
+
+        </FrameLayout>
 
     </android.support.v7.widget.GridLayout>
 

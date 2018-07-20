@@ -12,12 +12,12 @@
         android:orientation="vertical">
 
         <android.support.v7.widget.AppCompatImageView
-            android:id="@+id/result_image"
+            android:id="@+id/resultImage"
             android:layout_width="@dimen/result_image_size"
             android:layout_height="@dimen/result_image_size" />
 
         <android.support.v7.widget.AppCompatTextView
-            android:id="@+id/result_text"
+            android:id="@+id/resultText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAllCaps="true"
@@ -25,7 +25,7 @@
             android:textStyle="bold" />
 
         <android.support.v7.widget.AppCompatTextView
-            android:id="@+id/time_text_view"
+            android:id="@+id/timeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/primary_text"

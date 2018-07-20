@@ -5,7 +5,7 @@
     android:orientation="vertical">
 
     <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/show_text_view"
+        android:id="@+id/showTextView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -15,7 +15,7 @@
         android:textSize="@dimen/show_text_size" />
 
     <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/show_button"
+        android:id="@+id/showButton"
         style="@style/MainButton"
         android:text="@string/show" />
 

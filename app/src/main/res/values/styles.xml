@@ -44,8 +44,4 @@
         <item name="android:textSize">@dimen/keyboard_text_size</item>
     </style>
 
-    <style name="KeyboardButton.Image">
-        <item name="android:paddingTop">@dimen/keyboard_image_padding</item>
-        <item name="android:paddingBottom">@dimen/keyboard_image_padding</item>
-    </style>
 </resources>

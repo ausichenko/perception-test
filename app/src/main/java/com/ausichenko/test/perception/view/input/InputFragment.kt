@@ -20,35 +20,9 @@ class InputFragment : Fragment() {
     private var generated: String = ""
     private var millis: Int = 0
 
-    private lateinit var button0: TextView
-    private lateinit var button1: TextView
-    private lateinit var button2: TextView
-    private lateinit var button3: TextView
-    private lateinit var button4: TextView
-    private lateinit var button5: TextView
-    private lateinit var button6: TextView
-    private lateinit var button7: TextView
-    private lateinit var button8: TextView
-    private lateinit var button9: TextView
-    private lateinit var resetButton: ImageView
-    private lateinit var doneButton: ImageView
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_input, container, false)
-
-        button0 = view.findViewById(R.id.button_0)
-        button1 = view.findViewById(R.id.button_1)
-        button2 = view.findViewById(R.id.button_2)
-        button3 = view.findViewById(R.id.button_3)
-        button4 = view.findViewById(R.id.button_4)
-        button5 = view.findViewById(R.id.button_5)
-        button6 = view.findViewById(R.id.button_6)
-        button7 = view.findViewById(R.id.button_7)
-        button8 = view.findViewById(R.id.button_8)
-        button9 = view.findViewById(R.id.button_9)
-        resetButton = view.findViewById(R.id.reset_button)
-        doneButton = view.findViewById(R.id.done_button)
 
         generated = arguments?.let {
             val safeArgs = InputFragmentArgs.fromBundle(it)
