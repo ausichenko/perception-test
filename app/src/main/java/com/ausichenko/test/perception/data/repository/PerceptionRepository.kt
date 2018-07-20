@@ -16,4 +16,12 @@ class PerceptionRepository @Inject constructor(
     override fun setNonFirstStart() {
         preferences.setNonFirstStart()
     }
+
+    override fun getNumberLength(): Int {
+        return preferences.getNumberLength()
+    }
+
+    override fun setNumberLength(numberLength: Int) {
+        preferences.setNumberLength(numberLength)
+    }
 }
