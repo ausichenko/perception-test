@@ -1,17 +1,31 @@
-package com.ausichenko.test.perception
+package com.ausichenko.test.perception.view.intro
 
+import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.content.ContextCompat
+import com.ausichenko.test.perception.R
 import com.github.paolorotolo.appintro.AppIntro
 import com.github.paolorotolo.appintro.AppIntroFragment
 import com.github.paolorotolo.appintro.model.SliderPage
 
-
 class IntroActivity : AppIntro() {
+
+    private lateinit var introViewModel: IntroViewModel
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        initViewModel()
+        initPages()
+    }
+
+    private fun initViewModel() {
+        introViewModel = ViewModelProviders.of(this).get(IntroViewModel::class.java)
+    }
+
+    private fun initPages() {
         val startPage = SliderPage()
         startPage.title = getString(R.string.tutorial_start_title)
         startPage.description = getString(R.string.tutorial_start_description)
@@ -40,11 +54,15 @@ class IntroActivity : AppIntro() {
 
     override fun onSkipPressed(currentFragment: Fragment?) {
         super.onSkipPressed(currentFragment)
+
+        introViewModel.setNonFirstStart()
         finish()
     }
 
     override fun onDonePressed(currentFragment: Fragment?) {
         super.onDonePressed(currentFragment)
+
+        introViewModel.setNonFirstStart()
         finish()
     }
 }
