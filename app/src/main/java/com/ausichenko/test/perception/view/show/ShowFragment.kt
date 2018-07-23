@@ -5,12 +5,17 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.*
 import androidx.navigation.Navigation
+import com.ausichenko.test.perception.PerceptionApplication
 import com.ausichenko.test.perception.R
+import com.google.firebase.analytics.FirebaseAnalytics
 import kotlinx.android.synthetic.main.fragment_show.*
 import java.text.DecimalFormat
 import java.util.*
+import javax.inject.Inject
 
 class ShowFragment : Fragment() {
+
+    @Inject lateinit var firebaseAnalytics: FirebaseAnalytics
 
     private val generatedArg = "generated"
     private val millisArg = "millis"
@@ -20,6 +25,10 @@ class ShowFragment : Fragment() {
     private var generate: String = ""
 
     private lateinit var showViewModel: ShowViewModel
+
+    init {
+        PerceptionApplication.appComponent.inject(this)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +40,7 @@ class ShowFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_show, container, false)
 
         initViewModel()
-
+        firebaseAnalytics.setCurrentScreen(activity!!, "show", null)
         return view
     }
 
