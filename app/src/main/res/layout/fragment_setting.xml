@@ -14,29 +14,28 @@
         android:orientation="horizontal">
 
         <android.support.v7.widget.AppCompatImageView
-            android:id="@+id/minus_button"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_margin="30dp"
+            android:id="@+id/minusButton"
+            android:layout_width="@dimen/setting_button_size"
+            android:layout_height="@dimen/setting_button_size"
+            android:layout_margin="@dimen/setting_button_margin"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:clickable="true"
             android:focusable="true"
             app:srcCompat="@drawable/ic_minus" />
 
         <android.support.v7.widget.AppCompatTextView
-            android:id="@+id/count_text_view"
-            android:layout_width="0dp"
+            android:id="@+id/countTextView"
+            android:layout_width="@dimen/count_text_width"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:gravity="center"
             android:textColor="@color/primary_text"
-            android:textSize="50sp"/>
+            android:textSize="@dimen/count_text_size" />
 
         <android.support.v7.widget.AppCompatImageView
-            android:id="@+id/plus_button"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_margin="30dp"
+            android:id="@+id/plusButton"
+            android:layout_width="@dimen/setting_button_size"
+            android:layout_height="@dimen/setting_button_size"
+            android:layout_margin="@dimen/setting_button_margin"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:clickable="true"
             android:focusable="true"
@@ -44,25 +43,9 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/start_button"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@color/primary"
-        android:foreground="?attr/selectableItemBackground"
-        android:clickable="true"
-        android:focusable="true">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:textAllCaps="true"
-            android:textColor="@color/primary_light"
-            android:textSize="40sp"
-            android:text="@string/start"/>
-
-    </LinearLayout>
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/startButton"
+        style="@style/MainButton"
+        android:text="@string/start" />
 
 </LinearLayout>

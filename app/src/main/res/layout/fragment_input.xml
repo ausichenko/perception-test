@@ -5,264 +5,97 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/inputTextView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:background="@android:color/white"
         android:gravity="center"
-        android:orientation="vertical">
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/input_text_size" />
 
-        <android.support.v7.widget.AppCompatTextView
-            android:id="@+id/input_text_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textColor="@color/primary_text"
-            android:textSize="50sp" />
-
-    </LinearLayout>
-
-    <LinearLayout
+    <android.support.v7.widget.GridLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@color/primary"
-        android:orientation="vertical">
+        app:columnCount="3">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/button1"
+            style="@style/KeyboardButton.Text"
+            android:text="@string/button_1" />
 
-            <TextView
-                android:id="@+id/button_1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true"
-                android:textColor="@color/primary_light"
-                android:textSize="40sp"
-                android:text="1"/>
+        <TextView
+            android:id="@+id/button2"
+            style="@style/KeyboardButton.Text"
+            android:text="@string/button_2" />
 
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/white" />
+        <TextView
+            android:id="@+id/button3"
+            style="@style/KeyboardButton.Text"
+            android:text="@string/button_3" />
 
-            <TextView
-                android:id="@+id/button_2"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true"
-                android:textColor="@color/primary_light"
-                android:textSize="40sp"
-                android:text="2"/>
+        <TextView
+            android:id="@+id/button4"
+            style="@style/KeyboardButton.Text"
+            android:text="@string/button_4" />
 
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/white"
-                android:layout_weight="0"/>
+        <TextView
+            android:id="@+id/button5"
+            style="@style/KeyboardButton.Text"
+            android:text="@string/button_5" />
 
-            <TextView
-                android:id="@+id/button_3"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true"
-                android:textColor="@color/primary_light"
-                android:textSize="40sp"
-                android:text="3"/>
+        <TextView
+            android:id="@+id/button6"
+            style="@style/KeyboardButton.Text"
+            android:text="@string/button_6" />
 
-        </LinearLayout>
+        <TextView
+            android:id="@+id/button7"
+            style="@style/KeyboardButton.Text"
+            android:text="@string/button_7" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@android:color/white" />
+        <TextView
+            android:id="@+id/button8"
+            style="@style/KeyboardButton.Text"
+            android:text="@string/button_8" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/button9"
+            style="@style/KeyboardButton.Text"
+            android:text="@string/button_9" />
 
-            <TextView
-                android:id="@+id/button_4"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true"
-                android:textColor="@color/primary_light"
-                android:textSize="40sp"
-                android:text="4"/>
-
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/white"/>
-
-            <TextView
-                android:id="@+id/button_5"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true"
-                android:textColor="@color/primary_light"
-                android:textSize="40sp"
-                android:text="5"/>
-
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/white"
-                android:layout_weight="0"/>
-
-            <TextView
-                android:id="@+id/button_6"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true"
-                android:textColor="@color/primary_light"
-                android:textSize="40sp"
-                android:text="6"/>
-
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@android:color/white" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/button_7"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true"
-                android:textColor="@color/primary_light"
-                android:textSize="40sp"
-                android:text="7"/>
-
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/white"/>
-
-            <TextView
-                android:id="@+id/button_8"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true"
-                android:textColor="@color/primary_light"
-                android:textSize="40sp"
-                android:text="8"/>
-
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/white"
-                android:layout_weight="0"/>
-
-            <TextView
-                android:id="@+id/button_9"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true"
-                android:textColor="@color/primary_light"
-                android:textSize="40sp"
-                android:text="9"/>
-
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@android:color/white" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"/>
-
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/white"/>
-
-            <TextView
-                android:id="@+id/button_0"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true"
-                android:textColor="@color/primary_light"
-                android:textSize="40sp"
-                android:text="0"/>
-
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/white"
-                android:layout_weight="0"/>
+        <FrameLayout
+            android:id="@+id/resetButton"
+            style="@style/KeyboardButton">
 
             <android.support.v7.widget.AppCompatImageView
-                android:id="@+id/done_button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:padding="10dp"
-                app:srcCompat="@drawable/ic_done"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_clear" />
 
-        </LinearLayout>
+        </FrameLayout>
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/button0"
+            style="@style/KeyboardButton.Text"
+            android:text="@string/button_0" />
+
+        <FrameLayout
+            android:id="@+id/doneButton"
+            style="@style/KeyboardButton">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_done" />
+
+        </FrameLayout>
+
+    </android.support.v7.widget.GridLayout>
 
 </LinearLayout>

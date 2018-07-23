@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="main_button_text_size">40sp</dimen>
+
+    <!-- Setting -->
+    <dimen name="setting_button_size">60dp</dimen>
+    <dimen name="setting_button_margin">30dp</dimen>
+    <dimen name="count_text_width">100dp</dimen>
+
+    <dimen name="count_text_size">50sp</dimen>
+    <!-- Setting -->
+
+    <!-- Input -->
+    <dimen name="show_text_size">50sp</dimen>
+    <!-- Input -->
+
+    <!-- Input -->
+    <dimen name="keyboard_image_padding">10dp</dimen>
+
+    <dimen name="input_text_size">50sp</dimen>
+    <dimen name="keyboard_text_size">40sp</dimen>
+    <!-- Input -->
+
+    <!-- Result -->
+    <dimen name="result_image_size">150dp</dimen>
+    <dimen name="result_text_size">50sp</dimen>
+    <dimen name="time_text_size">18sp</dimen>
+    <dimen name="continue_text_size">16sp</dimen>
+    <!-- Result -->
+</resources>
