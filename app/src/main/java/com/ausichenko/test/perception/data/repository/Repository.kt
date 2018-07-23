@@ -1,10 +1,27 @@
 package com.ausichenko.test.perception.data.repository
 
-interface Repository {
+import com.ausichenko.test.perception.data.preference.Preferences
+import javax.inject.Inject
+import javax.inject.Singleton
 
-    fun isFirstStart(): Boolean
-    fun setNonFirstStart()
+@Singleton
+class Repository @Inject constructor(
+        private val preferences: Preferences
+) {
 
-    fun getNumberLength(): Int
-    fun setNumberLength(numberLength: Int)
+    fun isFirstStart(): Boolean {
+        return preferences.isFirstStart()
+    }
+
+    fun setNonFirstStart() {
+        preferences.setNonFirstStart()
+    }
+
+    fun getNumberLength(): Int {
+        return preferences.getNumberLength()
+    }
+
+    fun setNumberLength(numberLength: Int) {
+        preferences.setNumberLength(numberLength)
+    }
 }
