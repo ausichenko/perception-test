@@ -4,21 +4,31 @@ import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.content.ContextCompat
+import com.ausichenko.test.perception.PerceptionApplication
 import com.ausichenko.test.perception.R
 import com.github.paolorotolo.appintro.AppIntro
 import com.github.paolorotolo.appintro.AppIntroFragment
 import com.github.paolorotolo.appintro.model.SliderPage
+import com.google.firebase.analytics.FirebaseAnalytics
+import javax.inject.Inject
 
 class IntroActivity : AppIntro() {
 
+    @Inject
+    lateinit var firebaseAnalytics: FirebaseAnalytics
+
     private lateinit var introViewModel: IntroViewModel
 
+    init {
+        PerceptionApplication.appComponent.inject(this)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         initViewModel()
         initPages()
+        firebaseAnalytics.setCurrentScreen(this, "intro", null)
     }
 
     private fun initViewModel() {
@@ -57,6 +67,7 @@ class IntroActivity : AppIntro() {
 
         introViewModel.setNonFirstStart()
         finish()
+        firebaseAnalytics.logEvent("intro_skipped", null)
     }
 
     override fun onDonePressed(currentFragment: Fragment?) {
@@ -64,5 +75,6 @@ class IntroActivity : AppIntro() {
 
         introViewModel.setNonFirstStart()
         finish()
+        firebaseAnalytics.logEvent("intro_done", null)
     }
 }

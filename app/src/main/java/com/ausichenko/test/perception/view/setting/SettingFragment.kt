@@ -7,18 +7,27 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
+import com.ausichenko.test.perception.PerceptionApplication
 import com.ausichenko.test.perception.R
 import kotlinx.android.synthetic.main.fragment_setting.*
+import com.google.firebase.analytics.FirebaseAnalytics
+import javax.inject.Inject
 
 class SettingFragment : Fragment() {
 
-    private var currentCount:Int = 0
+    @Inject lateinit var firebaseAnalytics: FirebaseAnalytics
 
+    private var currentCount:Int = 0
     private lateinit var settingViewModel: SettingViewModel
+
+    init {
+        PerceptionApplication.appComponent.inject(this)
+    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         initViewModel()
+        firebaseAnalytics.setCurrentScreen(activity!!, "setting", null)
         return inflater.inflate(R.layout.fragment_setting, container, false)
     }
 
@@ -42,6 +51,9 @@ class SettingFragment : Fragment() {
         }
         startButton.setOnClickListener {
             settingViewModel.saveNumberLength(currentCount)
+            val bundle = Bundle()
+            bundle.putInt("number_length", currentCount)
+            firebaseAnalytics.logEvent("start_testing", bundle)
             Navigation.findNavController(it).navigate(R.id.action_start)
         }
     }
