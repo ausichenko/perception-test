@@ -7,13 +7,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
+import com.ausichenko.test.perception.PerceptionApplication
 import com.ausichenko.test.perception.R
+import com.google.firebase.analytics.FirebaseAnalytics
 import kotlinx.android.synthetic.main.fragment_result.*
+import javax.inject.Inject
 
 class ResultFragment : Fragment() {
 
+    @Inject lateinit var firebaseAnalytics: FirebaseAnalytics
+
     private var isSuccess: Boolean = false
     private var millis: Int = 0
+
+    init {
+        PerceptionApplication.appComponent.inject(this)
+    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -27,6 +36,12 @@ class ResultFragment : Fragment() {
             val safeArgs = ResultFragmentArgs.fromBundle(it)
             safeArgs.millis
         }!!
+
+        firebaseAnalytics.setCurrentScreen(activity!!, "result", null)
+        val bundle = Bundle()
+        bundle.putBoolean("is_success", isSuccess)
+        if (isSuccess) bundle.putInt("time", millis)
+        firebaseAnalytics.logEvent("result", bundle)
 
         return view
     }

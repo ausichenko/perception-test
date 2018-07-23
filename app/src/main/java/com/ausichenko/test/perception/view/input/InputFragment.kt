@@ -6,19 +6,26 @@ import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.navigation.Navigation
+import com.ausichenko.test.perception.PerceptionApplication
 import com.ausichenko.test.perception.R
+import com.google.firebase.analytics.FirebaseAnalytics
 import kotlinx.android.synthetic.main.fragment_input.*
+import javax.inject.Inject
 
 class InputFragment : Fragment() {
+
+    @Inject lateinit var firebaseAnalytics: FirebaseAnalytics
 
     private val isSuccessArg = "isSuccess"
     private val millisArg = "millis"
 
     private var generated: String = ""
     private var millis: Int = 0
+
+    init {
+        PerceptionApplication.appComponent.inject(this)
+    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -32,6 +39,8 @@ class InputFragment : Fragment() {
             val safeArgs = InputFragmentArgs.fromBundle(it)
             safeArgs.millis
         }!!
+
+        firebaseAnalytics.setCurrentScreen(activity!!, "input", null)
 
         return view
     }
